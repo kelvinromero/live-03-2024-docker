@@ -17,7 +17,7 @@ WORKDIR /app
 RUN install-php-extensions swoole pcntl
 
 # Instala dependencias do projeto
-COPY composer.json composer.lock ./
+COPY hyperf-skeleton/composer.* ./
 RUN composer install --no-dev
 
 # Expoe a porta 9501
