@@ -5,7 +5,18 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      target: development
     volumes:
       - .:/app
     ports:
       - "9501:9501"
+
+  app-production:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    volumes:
+      - .:/app
+    ports:
+      - "9502:9501"
